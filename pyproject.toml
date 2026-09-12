@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "relativity-visualized"
+version = "0.1.0"
+description = "Programmatic visual explanations of special relativity with ManimGL"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "manimgl>=1.7",
+]
+
+[tool.setuptools]
+packages = []
