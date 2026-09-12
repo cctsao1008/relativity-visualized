@@ -4,7 +4,7 @@ Programmatic visual explanations of special relativity, built with **ManimGL**.
 
 The project begins with one concrete question:
 
-> Why is `E₀ = mc²` a geometric consequence of Lorentz invariance rather than an isolated formula to memorize?
+> Why is $E_0 = mc^2$ a geometric consequence of Lorentz invariance rather than an isolated formula to memorize?
 
 The first sequence develops the idea through spacetime geometry and four-vectors:
 
@@ -34,7 +34,7 @@ E₀ = mc²
 - GitHub Issues contain experiments, evolving decisions, limitations, and implementation progress.
 - `scenes/` is the executable evidence of what has actually been implemented.
 
-Initial work is tracked in [Issue #1](https://github.com/cctsao1008/relativity-visualized/issues/1).
+Initial work is tracked in [Issue #1](https://github.com/cctsao1008/relativity-visualized/issues/1). Math-rendering normalization is tracked in [Issue #2](https://github.com/cctsao1008/relativity-visualized/issues/2).
 
 ## Why visualization?
 
@@ -52,10 +52,10 @@ The central analogy is:
 
 | Spacetime | Energy-momentum space |
 | --- | --- |
-| `x^μ = (ct, x)` | `P^μ = (E/c, p)` |
-| `c²dτ² = c²dt² - dx²` | `m²c² = E²/c² - p²` |
-| proper time `τ` is invariant | rest mass `m` is invariant |
-| Lorentz boost mixes `ct` and `x` | Lorentz boost mixes `E/c` and `p` |
+| $x^\mu = (ct,\mathbf{x})$ | $P^\mu = \left(E/c,\mathbf{p}\right)$ |
+| $c^2 d\tau^2 = c^2 dt^2 - d\mathbf{x}^2$ | $m^2c^2 = E^2/c^2 - p^2$ |
+| proper time $\tau$ is invariant | rest mass $m$ is invariant |
+| Lorentz boost mixes $ct$ and $x$ | Lorentz boost mixes $E/c$ and $p$ |
 
 ## Current scope
 
@@ -69,7 +69,7 @@ The first five scenes are:
 | `02_proper_time.py` | Connect the invariant interval to proper time. |
 | `03_four_velocity.py` | Construct four-velocity and show its invariant Minkowski norm. |
 | `04_four_momentum.py` | Construct four-momentum and identify its temporal component with energy. |
-| `05_mass_energy_relation.py` | Visualize the energy-momentum hyperbola and recover `E₀ = mc²` in the rest frame. |
+| `05_mass_energy_relation.py` | Visualize the energy-momentum hyperbola and recover $E_0 = mc^2$ in the rest frame. |
 
 See [`docs/derivation.md`](docs/derivation.md) for the mathematical chain and [`docs/visual-storyboard.md`](docs/visual-storyboard.md) for the visual narrative.
 
@@ -119,59 +119,64 @@ manimgl scenes/05_mass_energy_relation.py MassEnergyRelation -s
 
 ## Notation
 
-We use metric signature
+We use metric signature $(+,-,-,-)$, so that
 
-```text
-(+,-,-,-)
-```
-
-so that
-
-```text
-x^μ x_μ = c²t² - |x|²
-```
+$$
+x^\mu x_\mu = c^2t^2 - |\mathbf{x}|^2
+$$
 
 and
 
-```text
-P^μ P_μ = E²/c² - |p|² = m²c².
-```
+$$
+P^\mu P_\mu = \frac{E^2}{c^2} - |\mathbf{p}|^2 = m^2c^2.
+$$
 
 Primary symbols:
 
 | Symbol | Meaning |
 | --- | --- |
-| `c` | speed of light |
-| `v` | ordinary three-velocity; in early scenes, one-dimensional velocity |
-| `β = v/c` | dimensionless velocity |
-| `γ = 1/sqrt(1-β²)` | Lorentz factor |
-| `τ` | proper time |
-| `U^μ` | four-velocity |
-| `P^μ` | four-momentum |
-| `p` | ordinary relativistic momentum |
-| `m` | invariant/rest mass |
-| `E` | total relativistic energy |
-| `E₀` | rest energy |
+| $c$ | speed of light |
+| $v$ | ordinary three-velocity; in early scenes, one-dimensional velocity |
+| $\beta = v/c$ | dimensionless velocity |
+| $\gamma = 1/\sqrt{1-\beta^2}$ | Lorentz factor |
+| $\tau$ | proper time |
+| $U^\mu$ | four-velocity |
+| $P^\mu$ | four-momentum |
+| $p$ | ordinary relativistic momentum |
+| $m$ | invariant/rest mass |
+| $E$ | total relativistic energy |
+| $E_0$ | rest energy |
 
 ## Derivation target
 
-The project does **not** start by assuming `E = mc²`.
+The project does **not** start by assuming $E = mc^2$.
 
 It derives the invariant relation
 
-```text
-E² = p²c² + m²c⁴
-```
+$$
+E^2 = p^2c^2 + m^2c^4
+$$
 
 and then evaluates it in the particle's rest frame:
 
-```text
+$$
 p = 0
-⇒ E₀² = m²c⁴
-⇒ E₀ = mc²
-```
+\quad\Rightarrow\quad
+E_0^2 = m^2c^4
+\quad\Rightarrow\quad
+E_0 = mc^2.
+$$
 
 The positive-energy branch is used for ordinary particles.
+
+## Math-rendering convention
+
+Repository Markdown follows GitHub's native mathematical-expression syntax:
+
+- inline math uses `$...$`,
+- display math uses `$$...$$`,
+- fenced `math` blocks may be used when they improve readability or avoid Markdown conflicts,
+- backticks are reserved for code, filenames, commands, and intentionally literal text.
 
 ## Boundaries
 
