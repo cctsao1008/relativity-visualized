@@ -6,9 +6,9 @@ This storyboard defines the teaching intent of the first animation sequence. It 
 
 The viewer should leave with one structural idea:
 
-> `E₀ = mc²` is the rest-frame consequence of the Lorentz-invariant geometry of four-momentum.
+> $E_0 = mc^2$ is the rest-frame consequence of the Lorentz-invariant geometry of four-momentum.
 
-The animation should therefore avoid opening with `E = mc²` as a magical identity. The sequence must establish invariance first.
+The animation should therefore avoid opening with $E = mc^2$ as a magical identity. The sequence must establish invariance first.
 
 ---
 
@@ -22,11 +22,14 @@ Show that Lorentz transformations mix time and space while preserving a hyperbol
 
 ### Visual sequence
 
-1. Draw axes labelled `x` and `ct`.
+1. Draw axes labelled $x$ and $ct$.
 2. Draw an event vector from the origin.
 3. Display
-   
-   `c²t² - x² = invariant`.
+
+   $$
+   c^2t^2 - x^2 = \text{invariant}.
+   $$
+
 4. Introduce a boosted frame with tilted spacetime axes.
 5. Keep the event invariant while changing its coordinates.
 6. Draw one representative invariant hyperbola.
@@ -47,20 +50,27 @@ Connect the invariant interval to a physically meaningful scalar measured along 
 
 ### Visual sequence
 
-1. Reuse the `ct`–`x` geometry.
+1. Reuse the $ct$–$x$ geometry.
 2. Draw a timelike worldline segment.
-3. Mark coordinate intervals `dt` and `dx`.
+3. Mark coordinate intervals $dt$ and $dx$.
 4. Morph
 
-   `c²dt² - dx²`
+   $$
+   c^2dt^2 - dx^2
+   $$
 
    into
 
-   `c²dτ²`.
-5. Substitute `dx = v dt`.
+   $$
+   c^2d\tau^2.
+   $$
+
+5. Substitute $dx = v\,dt$.
 6. Resolve to
 
-   `dτ = dt / γ`.
+   $$
+   d\tau = \frac{dt}{\gamma}.
+   $$
 
 ### Viewer takeaway
 
@@ -74,21 +84,29 @@ Proper time is the Lorentz-invariant clock interval associated with the moving o
 
 ### Teaching objective
 
-Show that differentiating four-position with respect to proper time naturally produces a four-vector with invariant magnitude `c`.
+Show that differentiating four-position with respect to proper time naturally produces a four-vector with invariant magnitude $c$.
 
 ### Visual sequence
 
 1. Start from
 
-   `x^μ = (ct, x)`.
-2. Apply `d/dτ` visually to both components.
+   $$
+   x^\mu = (ct,x).
+   $$
+
+2. Apply $d/d\tau$ visually to both components.
 3. Obtain
 
-   `U^μ = (γc, γv)`.
+   $$
+   U^\mu = (\gamma c,\gamma v).
+   $$
+
 4. Evaluate the Minkowski norm.
 5. Collapse the algebra to
 
-   `U^μ U_μ = c²`.
+   $$
+   U^\mu U_\mu = c^2.
+   $$
 
 ### Viewer takeaway
 
@@ -108,22 +126,34 @@ Introduce four-momentum as mass times four-velocity and make the energy-momentum
 
 1. Start with
 
-   `P^μ = mU^μ`.
+   $$
+   P^\mu = mU^\mu.
+   $$
+
 2. Expand to
 
-   `P^μ = (γmc, γmv)`.
+   $$
+   P^\mu = (\gamma mc,\gamma mv).
+   $$
+
 3. Label spatial component
 
-   `p = γmv`.
-4. Replace the temporal component with
+   $$
+   p = \gamma mv.
+   $$
 
-   `E/c`.
+4. Replace the temporal component with $E/c$.
 5. Arrive at
 
-   `P^μ = (E/c, p)`.
+   $$
+   P^\mu = \left(\frac{E}{c},p\right).
+   $$
+
 6. Place beside
 
-   `x^μ = (ct, x)`
+   $$
+   x^\mu = (ct,x)
+   $$
 
    to emphasize the structural analogy.
 
@@ -143,34 +173,45 @@ Make the invariant energy-momentum relation geometrically visible, then recover 
 
 ### Visual sequence
 
-1. Draw axes `p` and `E/c`.
+1. Draw axes $p$ and $E/c$.
 2. Draw the positive-energy mass shell
 
-   `(E/c)² - p² = (mc)²`.
-3. Place a point on the hyperbola and label it `(p, E/c)`.
+   $$
+   \left(\frac{E}{c}\right)^2 - p^2 = (mc)^2.
+   $$
+
+3. Place a point on the hyperbola and label it $(p,E/c)$.
 4. Move the point along the same hyperbola to represent different inertial observers.
-5. Keep the invariant label `m` fixed.
+5. Keep the invariant label $m$ fixed.
 6. Display
 
-   `E² = p²c² + m²c⁴`.
-7. Move to the rest-frame point where `p = 0`.
+   $$
+   E^2 = p^2c^2 + m^2c^4.
+   $$
+
+7. Move to the rest-frame point where $p = 0$.
 8. Reduce the equation to
 
-   `E₀ = mc²`.
-9. Optionally show the `m = 0` asymptote as a future extension:
+   $$
+   E_0 = mc^2.
+   $$
 
-   `E = pc`.
+9. Optionally show the $m = 0$ asymptote as a future extension:
+
+   $$
+   E = pc.
+   $$
 
 ### Viewer takeaway
 
-`E₀ = mc²` is not the whole relation. It is the rest-frame intercept of the invariant mass shell.
+$E_0 = mc^2$ is not the whole relation. It is the rest-frame intercept of the invariant mass shell.
 
 ---
 
 ## Visual consistency rules
 
-- Use `(+,-,-,-)` metric signature throughout.
-- Keep `ct` and `E/c` as vertical coordinates in diagrams.
+- Use $(+,-,-,-)$ metric signature throughout.
+- Keep $ct$ and $E/c$ as vertical coordinates in diagrams.
 - Keep equations adjacent to the geometry they explain.
 - Prefer transformations/morphs over replacing one unrelated equation card with another.
 - Avoid decorative animation that does not carry conceptual information.
